@@ -1,10 +1,6 @@
 # Locaweb Test
 
-For more information about the test itself, check the README.md file at locaweb-test-overview folder.
-
-To solve the test I needed to learn about HTTParty and SitePrism. It was fun =)
-
-I need to better understand the Section in SitePrism to improve my code.
+For more information about the test itself, check the README.md file (in pt-br) at locaweb-test-overview folder.
 
 ## Programming Language, Docker version, and libraries used to solve the problems
 
@@ -61,3 +57,23 @@ $ cucumber -p html_reports
 ```sh
 $ rspec
 ```
+
+## Why I used such technologies?
+#### Ruby
+I chose Ruby for two reasons:
+- It is the main programming language at Locaweb
+- It is my favorite language (Although I could have done this project with Node.js or Python -- my other favorites)
+
+#### RSpec, Cucumber, and Webmock
+I have a strong experience with tests (academic and professional) and I like both. So I used them. Yes, I could use just one of them (for this project I would prefer to use RSpec) but I chose to show both of them here in my code.
+
+This was my first time using Webmock. Since Locaweb Tweets changes every time I make a request, I realized that it was necessary to mock some data and simulate (stub) a request to test my methods always with this mocked data. For my first time with this library, I could say that I liked.
+
+#### HTTParty
+Frankly, once I met this library, I fell in love with it. I use it whenever possible.
+
+#### Puma and Shotgun
+I use Shotgun for autoreload when developing (a habit that I got in Node.js with nodemon). As for Web Server, I prefer to not use WebBrick in production. I could use Thin, but I have little more experience with Puma. So, I used it.
+
+#### Sinatra
+Since this was a small project with only two endpoints, I decided that Sinatra was a better fit. I could used Rails but (at least for me) it would be a cannon to kill a fly.
