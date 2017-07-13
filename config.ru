@@ -1,3 +1,5 @@
-require './app'
+#!/usr/bin/env ruby
 
-run Sinatra::Application
+require_relative './routes/app'
+
+run MyApp
