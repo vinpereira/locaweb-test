@@ -1,6 +1,6 @@
 # Locaweb Test
 
-For more information about the test itself, check the README.md file (in pt-br) at locaweb-test-overview folder.
+For more information about the test itself, check the README.md file (in pt-br) at docs/locaweb-test-overview/ folder.
 
 ## Programming Language, Docker and Docker Compose version, and libraries used to solve the problems
 
