@@ -1,0 +1,11 @@
+version: '3'
+services:
+  movies:  
+    container_name: locaweb-tweets-test
+    image: my-app-locaweb-tweets-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "9292:9292"
+    
