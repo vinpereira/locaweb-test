@@ -101,3 +101,4 @@ I use Shotgun for autoreload when developing (a habit that I got in Node.js with
 
 #### Sinatra
 Since this was a small project with only two endpoints, I decided that Sinatra was a better fit. I could used Rails but (at least for me) it would be a cannon to kill a fly.
+
