@@ -38,6 +38,8 @@ $ shotgun
 
 - Access ```localhost:9393/api/v1/most_relevants``` or ```localhost:9393/api/v1/most_mentions``` to see the data (JSON format)
 
+OR
+
 - Start server with autoreload (for production/test)
 ```sh
 $ puma
