@@ -53,7 +53,7 @@ Then
 
 - Start server with autoreload (for development)
 ```sh
-$ shotgun
+$ shotgun --port=9292
 ```
 
 - Access ```localhost:9393/api/v1/most_relevants``` or ```localhost:9393/api/v1/most_mentions``` to see the data (JSON format)
