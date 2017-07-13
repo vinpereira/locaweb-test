@@ -9,10 +9,6 @@ before_install:
   - docker build -t vinpereira/my-app-locaweb-tweets-test .
   - docker run -d --rm --name locaweb-tweets-test -p 9292:9292 vinpereira/my-app-locaweb-tweets-test
   - docker ps -a
-  - docker exec locaweb-tweets-test /bin/sh -c "cd /usr/src/app; cucumber"
 
 script:
   - docker exec locaweb-tweets-test /bin/sh -c "cd /usr/src/app; cucumber"
-
-# script:
-#   - docker-compose up
