@@ -2,10 +2,11 @@
 
 For more information about the test itself, check the README.md file (in pt-br) at locaweb-test-overview folder.
 
-## Programming Language, Docker version, and libraries used to solve the problems
+## Programming Language, Docker and Docker Compose version, and libraries used to solve the problems
 
   - Ruby 2.4.1 @ Ubuntu 17.04 64-bits
   - Docker 17.06.0-ce
+  - Docker Compose 1.14.0
 
 Main libraries:
 - cucumber        ~>2.4.0
@@ -17,7 +18,7 @@ Main libraries:
 - sinatra-contrib ~>2.0.0
 - webmock         ~>2.3.2'
 
-### Running the code with Docker
+### Running the code with Docker Compose
 - Clone this repository and access its root folder
 
 - Run Docker Compose (re)start a container
@@ -26,10 +27,29 @@ Main libraries:
 $ docker-compose up
 ```
 
-- Access ```localhost:9393/api/v1/most_relevants``` or ```localhost:9393/api/v1/most_mentions``` to see the data (JSON format)
+- Access ```localhost:9292/api/v1/most_relevants``` or ```localhost:9292/api/v1/most_mentions``` to see the data (JSON format)
 
-### Running the code without Docker
+### Running the code with Docker
 - Clone this repository and access its root folder
+
+- Build a Docker image for this project
+```sh
+$ docker build -t my-app-locaweb-tweets-test .
+```
+
+- Run a Docker container with the image
+```sh
+$ docker run -d --name locaweb-tweets-test -p 9292:9292 my-app-locaweb-tweets-test
+```
+
+- Access ```localhost:9292/api/v1/most_relevants``` or ```localhost:9292/api/v1/most_mentions``` to see the data (JSON format)
+
+### Running the code without Docker or Docker Compose
+- Clone this repository and access its root folder
+
+- Execute ```bundle install``` to install all dependencies
+
+Then
 
 - Start server with autoreload (for development)
 ```sh
