@@ -1,7 +1,7 @@
-# encoding: utf-8
+require_relative '../controllers/tweets.rb'
+
 require 'sinatra'
 require 'sinatra/namespace'
-require_relative '../controllers/tweets.rb'
 
 class MyApp < Sinatra::Base
     register Sinatra::Namespace

@@ -1,5 +1,5 @@
-require 'json'
 require 'httparty'
+require 'json'
 
 class LocawebTweetsService
     URI = URI('http://tweeps.locaweb.com.br/tweeps')
