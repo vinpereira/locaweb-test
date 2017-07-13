@@ -56,7 +56,7 @@ Then
 $ shotgun --port=9292
 ```
 
-- Access ```localhost:9393/api/v1/most_relevants``` or ```localhost:9393/api/v1/most_mentions``` to see the data (JSON format)
+- Access ```localhost:9292/api/v1/most_relevants``` or ```localhost:9292/api/v1/most_mentions``` to see the data (JSON format)
 
 OR
 
@@ -82,7 +82,7 @@ $ cucumber -p html_reports
 $ rspec
 ```
 
-## Why I used such technologies?
+## Why did I use such technologies?
 #### Ruby
 I chose Ruby for two reasons:
 - It is the main programming language at Locaweb
