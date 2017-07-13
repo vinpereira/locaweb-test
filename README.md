@@ -36,12 +36,14 @@ $ docker-compose up
 $ shotgun
 ```
 
+- Access ```localhost:9393/api/v1/most_relevants``` or ```localhost:9393/api/v1/most_mentions``` to see the data (JSON format)
+
 - Start server with autoreload (for production/test)
 ```sh
 $ puma
 ```
 
-- Access ```localhost:9393/api/v1/most_relevants``` or ```localhost:9393/api/v1/most_mentions``` to see the data (JSON format)
+- Access ```localhost:9292/api/v1/most_relevants``` or ```localhost:9292/api/v1/most_mentions``` to see the data (JSON format)
 
 #### For tests
 In the root folder:
