@@ -5,6 +5,8 @@
 
 # Locaweb Test
 
+![Locaweb](./public/images/locaweb.png)
+
 For more information about the test itself, check the README.md file (in pt-br) at docs/locaweb-test-overview/ folder.
 
 ## Programming Language, Docker and Docker Compose version, and libraries used to solve the problems
