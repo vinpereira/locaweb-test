@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/vinpereira/locaweb-test.svg?branch=master)](https://travis-ci.org/vinpereira/locaweb-test)
+[![Code Climate](https://codeclimate.com/github/vinpereira/locaweb-test/badges/gpa.svg)](https://codeclimate.com/github/vinpereira/locaweb-test)
 
 # Locaweb Test
 
