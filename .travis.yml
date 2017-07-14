@@ -1,26 +1,14 @@
 sudo: required
 
-env:
-  global:
-    - CC_TEST_REPORTER_ID=cd36c8ec4582c5043105100f9078e452ba37f098142d0e8f63087ea417646338
-    - CODECLIMATE_REPO_TOKEN=cd36c8ec4582c5043105100f9078e452ba37f098142d0e8f63087ea417646338
-    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
-
 language: ruby
 
 services:
   - docker
 
 before_install:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
   - docker build -t vinpereira/my-app-locaweb-tweets-test .
   - docker run -d --rm --name locaweb-tweets-test -p 9292:9292 vinpereira/my-app-locaweb-tweets-test
   - docker ps -a
 
 script:
   - docker exec locaweb-tweets-test /bin/sh -c "cd /usr/src/app; bundle exec cucumber && bundle exec codeclimate-test-reporter"
-
-addons:
-  code_climate:
-    repo_token: 34642f7bbe2f4e568ac3cb994769229e0e794f26
