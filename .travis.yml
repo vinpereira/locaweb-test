@@ -19,11 +19,8 @@ before_install:
   - docker ps -a
 
 script:
-  - docker exec locaweb-tweets-test /bin/sh -c "cd /usr/src/app; bundle exec cucumber"
+  - docker exec locaweb-tweets-test /bin/sh -c "cd /usr/src/app; bundle exec cucumber && bundle exec codeclimate-test-reporter"
 
 addons:
   code_climate:
     repo_token: 34642f7bbe2f4e568ac3cb994769229e0e794f26
-# regular test configuration
-after_success:
-  - bundle exec codeclimate-test-reporter
