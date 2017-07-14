@@ -19,5 +19,14 @@ engines:
     #  Rubocop/Metrics/ClassLength:
     #    enabled: false
 
+ratings:
+   paths:
+   - "controllers/"
+   - "features/"
+   - "mocks/"
+   - "routes/"
+   - "services/"
+   - "spec/"
+
 exclude_paths:
 - "apidoc/"
