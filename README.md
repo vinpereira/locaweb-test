@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vinpereira/locaweb-test.svg?branch=master)](https://travis-ci.org/vinpereira/locaweb-test)
+
 # Locaweb Test
 
 For more information about the test itself, check the README.md file (in pt-br) at docs/locaweb-test-overview/ folder.
