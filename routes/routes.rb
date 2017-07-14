@@ -1,27 +1,29 @@
-require_relative '../controllers/tweets.rb'
+require_relative "#{Dir.pwd}/controllers/tweets.rb"
 
 require 'sinatra'
 require 'sinatra/namespace'
 
-class MyApp < Sinatra::Base
+# Sinatra Base class where all routes are created
+# This class is used at config.ru
+class MyAppRoutes < Sinatra::Base
     register Sinatra::Namespace
-    
+
+    set :public_folder, 'apidoc'
+    enable :static
+
     before do
         content_type :json
         @tweets = LocawebTweetsController.new
     end
 
     get '/' do
-        'Hello World!!'
+        content_type :html
+        File.read(File.join('./apidoc', "index.html"))
     end
 
     namespace '/api/v1' do
-        get '/' do
-            'Locaweb Test'
-        end
-
         # =begin
-        # @api {get} /most_relevants/ Request Tweets information about Locaweb
+        # @api {get} /api/v1/most_relevants Request Tweets information about Locaweb
         # @apiVersion 1.0.0
         # @apiName GetMostRelevants
         # @apiGroup Tweets
@@ -47,13 +49,13 @@ class MyApp < Sinatra::Base
         #             }
         #         }
         #     ]
-        # =end
+        # =endmost_relevants
         get '/most_relevants' do
             @tweets.most_relevants_tweets
         end
 
         # =begin
-        # @api {get} /most_mentions/ Request Users that has more tweets about Locaweb
+        # @api {get} /api/v1/most_mentions Request Users that has more tweets about Locaweb
         # @apiVersion 1.0.0
         # @apiName GetMostMentions
         # @apiGroup Tweets

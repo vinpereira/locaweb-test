@@ -1,5 +1,6 @@
 require_relative "#{Dir.pwd}/services/tweets.rb"
 
+# Controller class responsible for consume services
 class LocawebTweetsController
     URI = URI('http://tweeps.locaweb.com.br/tweeps')
 
@@ -10,7 +11,6 @@ class LocawebTweetsController
     def most_relevants_tweets
         relevants_tweets =  @tweets_service.sort_by_relevance(@tweets_service.relevant_tweets).map { |tweet| @tweets_service.important_fields(tweet) }
 
-        # relevants_tweets.to_json
         JSON.pretty_generate(relevants_tweets)
     end
 
@@ -23,7 +23,6 @@ class LocawebTweetsController
             locaweb_mentions[key] = @tweets_service.sort_by_relevance(value).map! { |tweet| @tweets_service.important_fields(tweet) }
         end
 
-        # locaweb_mentions.to_json
         JSON.pretty_generate(locaweb_mentions)
     end
 end

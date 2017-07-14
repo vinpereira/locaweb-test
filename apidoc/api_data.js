@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "get",
-    "url": "/most_mentions/",
+    "url": "/api/v1/most_mentions",
     "title": "Request Users that has more tweets about Locaweb",
     "version": "1.0.0",
     "name": "GetMostMentions",
@@ -20,7 +20,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/most_relevants/",
+    "url": "/api/v1/most_relevants",
     "title": "Request Tweets information about Locaweb",
     "version": "1.0.0",
     "name": "GetMostRelevants",

@@ -1,6 +1,7 @@
 require 'httparty'
 require 'json'
 
+# Service class responsible for provide helper methods for tweets
 class LocawebTweetsService
     URI = URI('http://tweeps.locaweb.com.br/tweeps')
 
