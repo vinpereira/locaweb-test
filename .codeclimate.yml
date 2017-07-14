@@ -1,4 +1,6 @@
-Ruby: true
+engines:
+  rubocop:
+    enabled: false
 
 exclude_paths:
 - "./apidoc"
