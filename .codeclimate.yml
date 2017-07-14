@@ -1,2 +1,4 @@
+Ruby: true
+
 exclude_paths:
 - "./apidoc"
