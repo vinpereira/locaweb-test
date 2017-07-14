@@ -12,3 +12,10 @@ before_install:
 
 script:
   - docker exec locaweb-tweets-test /bin/sh -c "cd /usr/src/app; cucumber"
+
+addons:
+  code_climate:
+    repo_token: cd36c8ec4582c5043105100f9078e452ba37f098142d0e8f63087ea417646338
+# regular test configuration
+after_success:
+  - bundle exec codeclimate-test-reporter
