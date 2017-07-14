@@ -1,6 +1,23 @@
 engines:
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby:
+      - javascript:
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
   rubocop:
     enabled: true
+    #checks:
+    #  Rubocop/Metrics/ClassLength:
+    #    enabled: false
 
 exclude_paths:
 - "./apidoc"
