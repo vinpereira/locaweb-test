@@ -22,7 +22,7 @@ Main libraries:
 - Clone this repository and access its root folder
 
 - Run Docker Compose (re)start a container
-  - If there is no image available (or is the first time) then Docker Compose will build the image
+  - If there is no image available (or it is the first time) then Docker Compose will build the image
 ```sh
 $ docker-compose up
 ```
@@ -86,10 +86,10 @@ $ rspec
 #### Ruby
 I chose Ruby for two reasons:
 - It is the main programming language at Locaweb
-- It is my favorite language (Although I could have done this project with Node.js or Python -- my other favorites)
+- It is my favorite language (although I could have done this project with Node.js or Python -- my other favorites)
 
 #### RSpec, Cucumber, and Webmock
-I have a strong experience with tests (academic and professional) and I like both. So I used them. Yes, I could use just one of them (for this project I would prefer to use RSpec) but I chose to show both of them here in my code.
+I have a strong experience with tests (academic and professional) and I like both. So I used them. Yes, I could have used just one of them (for this project I would prefer to use RSpec) but I chose to show both of them here in my code.
 
 This was my first time using Webmock. Since Locaweb Tweets changes every time I make a request, I realized that it was necessary to mock some data and simulate (stub) a request to test my methods always with this mocked data. For my first time with this library, I could say that I liked.
 
