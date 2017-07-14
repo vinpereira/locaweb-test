@@ -6,6 +6,7 @@ define({ "api": [
     "version": "1.0.0",
     "name": "GetMostMentions",
     "group": "Tweets",
+    "description": "<p>see more at <a href=\"/api/v1/most_mentions\">Most Mentions</a></p>",
     "success": {
       "examples": [
         {
@@ -15,7 +16,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "./routes/app.rb",
+    "filename": "./routes/routes.rb",
     "groupTitle": "Tweets"
   },
   {
@@ -25,6 +26,7 @@ define({ "api": [
     "version": "1.0.0",
     "name": "GetMostRelevants",
     "group": "Tweets",
+    "description": "<p>see more at <a href=\"/api/v1/most_relevants\">Most Relevants</a></p>",
     "success": {
       "examples": [
         {
@@ -34,7 +36,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "./routes/app.rb",
+    "filename": "./routes/routes.rb",
     "groupTitle": "Tweets"
   },
   {

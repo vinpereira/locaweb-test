@@ -27,6 +27,7 @@ class MyAppRoutes < Sinatra::Base
         # @apiVersion 1.0.0
         # @apiName GetMostRelevants
         # @apiGroup Tweets
+        # @apiDescription see more at <a href="/api/v1/most_relevants">Most Relevants</a>
 
         # @apiSuccessExample Success-Response:
         #     HTTP/1.1 200 OK
@@ -59,6 +60,7 @@ class MyAppRoutes < Sinatra::Base
         # @apiVersion 1.0.0
         # @apiName GetMostMentions
         # @apiGroup Tweets
+        # @apiDescription see more at <a href="/api/v1/most_mentions">Most Mentions</a>
 
         # @apiSuccessExample Success-Response:
         #     HTTP/1.1 200 OK
