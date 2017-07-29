@@ -1,4 +1,4 @@
-require_relative "#{Dir.pwd}/controllers/tweets.rb"
+require_relative "#{Dir.pwd}/controllers/locaweb_tweets_controller.rb"
 
 require 'httparty'
 require 'rspec'
