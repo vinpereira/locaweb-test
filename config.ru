@@ -1,3 +1,3 @@
-require_relative "#{Dir.pwd}/routes/routes.rb"
+require_relative "#{Dir.pwd}/routes/app_routes.rb"
 
-run MyAppRoutes
+run AppRoutes

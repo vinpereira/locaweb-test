@@ -1,11 +1,11 @@
-require_relative "#{Dir.pwd}/controllers/tweets.rb"
+require_relative "#{Dir.pwd}/controllers/locaweb_tweets_controller.rb"
 
 require 'sinatra'
 require 'sinatra/namespace'
 
 # Sinatra Base class where all routes are created
 # This class is used at config.ru
-class MyAppRoutes < Sinatra::Base
+class AppRoutes < Sinatra::Base
     register Sinatra::Namespace
 
     set :public_folder, 'apidoc'
