@@ -1,3 +1,3 @@
 Before do
-    @locaweb_tweets = LocawebTweetsController.new
+  @locaweb_tweets = LocawebTweetsController.new
 end

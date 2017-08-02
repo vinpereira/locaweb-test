@@ -10,6 +10,7 @@ gem 'sinatra-contrib', '~>2.0.0'
 group :development, :test do
   gem 'cucumber', '~>2.4.0'
   gem 'rspec', '~>3.6.0'
+  gem 'rubocop', '~>0.49.1'
   gem 'shotgun', '~>0.9.2'
   gem 'webmock', '~>3.0.1'
 end
