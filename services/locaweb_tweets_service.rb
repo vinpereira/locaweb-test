@@ -32,7 +32,9 @@ class LocawebTweetsService
 
     all_tweets = JSON.parse(response.body)
 
-    all_tweets['statuses'].each { |tweet| DateTime.parse(tweet['created_at']).strftime('%d/%m/%Y %H:%M:%S') }
+    all_tweets['statuses'].each do |tweet|
+      DateTime.parse(tweet['created_at']).strftime('%d/%m/%Y %H:%M:%S')
+    end
 
     all_tweets
   end

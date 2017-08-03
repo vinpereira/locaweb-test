@@ -22,6 +22,7 @@ class AppRoutes < Sinatra::Base
   end
 
   namespace '/api/v1' do
+    # rubocop:disable LineLength
     # =begin
     # @api {get} /api/v1/most_relevants Request Tweets information about Locaweb
     # @apiVersion 1.0.0
@@ -51,10 +52,12 @@ class AppRoutes < Sinatra::Base
     #         }
     #     ]
     # =endmost_relevants
+    # rubocop:enable LineLength
     get '/most_relevants' do
       @tweets.most_relevants_tweets
     end
 
+    # rubocop:disable LineLength
     # =begin
     # @api {get} /api/v1/most_mentions Request Users that has more tweets about Locaweb
     # @apiVersion 1.0.0
@@ -86,6 +89,7 @@ class AppRoutes < Sinatra::Base
     #         ]
     #     }
     # =end
+    # rubocop:enable LineLength
     get '/most_mentions' do
       @tweets.most_locaweb_mentions
     end
