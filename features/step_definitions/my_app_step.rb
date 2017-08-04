@@ -1,5 +1,5 @@
 Given(/^I perform a GET request to "(.*)" endpoint$/) do |endpoint_name|
-  @http_api = HTTParty.get("http://localhost:9292/api/v1/#{endpoint_name}")
+  @http_api = Faraday.get "http://localhost:9292/api/v1/#{endpoint_name}"
 end
 
 Then(/^I should not get an empty response$/) do

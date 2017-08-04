@@ -2,8 +2,6 @@ require_relative "#{Dir.pwd}/services/locaweb_tweets_service.rb"
 
 # Controller class responsible for consume services
 class LocawebTweetsController
-  URI = URI('http://tweeps.locaweb.com.br/tweeps')
-
   def initialize
     @tweets_service = LocawebTweetsService.new
   end

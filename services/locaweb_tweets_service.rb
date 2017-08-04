@@ -1,10 +1,8 @@
-require 'httparty'
+require 'faraday'
 require 'json'
 
 # Service class responsible for provide helper methods for tweets
 class LocawebTweetsService
-  URI = URI('http://tweeps.locaweb.com.br/tweeps')
-
   def map_relevants_tweets
     sort_by_relevance(relevant_tweets).map { |tweet| important_fields(tweet) }
   end
@@ -28,7 +26,10 @@ class LocawebTweetsService
   end
 
   def fetch_all
-    response = HTTParty.get(URI, headers: { 'Username' => 'testando_qualquer_email@gmail.com' })
+    response = Faraday.get do |req|
+      req.url 'http://tweeps.locaweb.com.br/tweeps'
+      req.headers['Username'] = 'testando_qualquer_email@gmail.com'
+    end
 
     all_tweets = JSON.parse(response.body)
 
