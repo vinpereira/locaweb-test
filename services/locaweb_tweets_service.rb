@@ -53,26 +53,38 @@ class LocawebTweetsService
   end
 
   def important_fields(tweet)
-    relevant_tweets_fields = {}
+    @relevant_tweets_fields = {}
 
-    relevant_tweets_fields[:user] = {}
+    @relevant_tweets_fields[:user] = {}
 
-    relevant_tweets_fields[:user][:profile] = {
+    important_fields_profile(tweet)
+
+    important_fields_followers(tweet)
+
+    important_fields_tweet_info(tweet)
+
+    @relevant_tweets_fields
+  end
+
+  def important_fields_profile(tweet)
+    @relevant_tweets_fields[:user][:profile] = {
       screen_name: tweet['user']['screen_name'],
       url: tweet['user']['profile_image_url']
     }
+  end
 
-    relevant_tweets_fields[:user][:followers_info] = {
+  def important_fields_followers(tweet)
+    @relevant_tweets_fields[:user][:followers_info] = {
       count: tweet['user']['followers_count']
     }
+  end
 
-    relevant_tweets_fields[:tweet_info] = {
+  def important_fields_tweet_info(tweet)
+    @relevant_tweets_fields[:tweet_info] = {
       text: tweet['text'],
       created_at: tweet['created_at'],
       retweet_count: tweet['retweet_count'],
       favorite_count: tweet['favorite_count']
     }
-
-    relevant_tweets_fields
   end
 end
