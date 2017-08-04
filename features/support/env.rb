@@ -1,6 +1,6 @@
 require_relative "#{Dir.pwd}/controllers/locaweb_tweets_controller.rb"
 
-require 'httparty'
+require 'faraday'
 require 'rspec'
 require 'simplecov'
 require 'webmock/cucumber'
