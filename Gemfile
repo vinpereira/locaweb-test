@@ -4,7 +4,7 @@ ruby '~>2.4'
 
 gem 'faraday', '~>0.12.2'
 gem 'puma', '~>3.9.1'
-gem 'sinatra', '~>2.0.0'
+gem 'sinatra', '~>2.0.2'
 gem 'sinatra-contrib', '~>2.0.0'
 
 group :development, :test do
